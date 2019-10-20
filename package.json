@@ -1,6 +1,6 @@
 {
   "name": "cross-env-cfg",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.1",
   "description": "Run scripts that set and use config & environment variables across platforms",
   "main": "src/index.js",
   "bin": {
@@ -11,8 +11,11 @@
     "node": ">=8.0"
   },
   "scripts": {
+    "build": "kcd-scripts build",
     "lint": "kcd-scripts lint",
-    "validate": "kcd-scripts validate"
+    "validate": "kcd-scripts validate",
+    "predeploy": "npm run build",
+    "deploy": "npm publish --access public"
   },
   "husky": {
     "hooks": {
@@ -20,8 +23,7 @@
     }
   },
   "files": [
-    "src",
-    "!__tests__"
+    "dist"
   ],
   "keywords": [
     "cross-environment",
@@ -41,6 +43,11 @@
   "eslintConfig": {
     "extends": "./node_modules/kcd-scripts/eslint.js"
   },
+  "eslintIgnor": [
+    "node_modules",
+    "coverage",
+    "dist"
+  ],
   "// babel 1": "this disables all built-in plugins from kcd-scripts for tests",
   "// babel 2": "that way we ensure that the tests run without compilation",
   "// babel 3": "because this module is published as-is. It is not compiled.",
@@ -48,9 +55,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/joeireland/cross-env-cfg.git"
-  },
-  "bugs": {
-    "url": "https://github.com/joeireland/cross-env-cfg/issues"
   },
   "homepage": "https://github.com/joeireland/cross-env-cfg#readme"
 }
