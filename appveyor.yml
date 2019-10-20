@@ -1,0 +1,19 @@
+environment:
+  matrix:
+    - node_version: "8"
+
+branches:
+  only:
+    - master
+
+install:
+  - ps: Install-Product node $env:node_version
+  - npm i
+
+test_script:
+  - node --version
+
+cache:
+  - ~/.npm
+
+build: off
