@@ -1,11 +1,11 @@
 {
   "name": "cross-env-cfg",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Run scripts that set and use config & environment variables across platforms",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "bin": {
-    "config-env": "src/bin/cross-evn-cfg.js",
-    "config-env-shell": "src/bin/cross-env-cfg-shell.js"
+    "config-env": "dist/bin/cross-evn-cfg.js",
+    "config-env-shell": "dist/bin/cross-env-cfg-shell.js"
   },
   "engines": {
     "node": ">=8.0"
