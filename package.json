@@ -4,8 +4,8 @@
   "description": "Run scripts that set and use config & environment variables across platforms",
   "main": "dist/index.js",
   "bin": {
-    "config-env": "dist/bin/cross-env-cfg.js",
-    "config-env-shell": "dist/bin/cross-env-cfg-shell.js"
+    "cross-env-cfg": "dist/bin/cross-env-cfg.js",
+    "cross-env-cfg-shell": "dist/bin/cross-env-cfg-shell.js"
   },
   "engines": {
     "node": ">=8.0"
