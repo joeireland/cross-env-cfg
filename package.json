@@ -1,6 +1,6 @@
 {
   "name": "cross-env-cfg",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Run scripts that set and use config & environment variables across platforms",
   "main": "dist/index.js",
   "bin": {
